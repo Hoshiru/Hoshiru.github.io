@@ -1,0 +1,106 @@
+body {
+  position: relative;
+  height: 100%;
+  background-color: #1A1A1A;
+  color: #EFEFEF;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center; }
+
+main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: space-between; }
+  main .appContainer {
+    background-color: #1A1A1A;
+    width: 88%;
+    padding: 2% 2% 2%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-around; }
+    main .appContainer .appHeader {
+      text-align: left;
+      border-bottom: solid 1px #198aba; }
+      main .appContainer .appHeader .headerText {
+        display: inline;
+        font-size: 40px;
+        color: #EFEFEF; }
+    main .appContainer .appBody {
+      padding-top: 1%; }
+  main .sidebar {
+    width: 12%;
+    height: 100%;
+    min-width: 27px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #0e0f12;
+    border-right: solid 1px #33CCD3;
+    font-size: 14px; }
+    @media (max-width: 400px) {
+      main .sidebar {
+        background-color: transparent; } }
+    main .sidebar .sideHeader {
+      font-family: "Pacifico", Helvetica, sans-serif;
+      color: #198aba; }
+    main .sidebar .sidenav {
+      text-align: left;
+      position: relative;
+      top: 5%; }
+      main .sidebar .sidenav .item {
+        display: block;
+        height: 80px;
+        padding-top: 13%;
+        cursor: pointer;
+        border: solid 1px #33CCD3;
+        border-left: none;
+        border-right: none;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+        main .sidebar .sidenav .item .fa {
+          position: absolute;
+          left: 8%;
+          font-size: 22px;
+          color: #EFEFEF; }
+        main .sidebar .sidenav .item .menu-text {
+          display: inline;
+          position: absolute;
+          left: 25%;
+          color: white; }
+        main .sidebar .sidenav .item .itemlink {
+          text-decoration: none; }
+        main .sidebar .sidenav .item:hover {
+          background: #0e0f12;
+          /* For browsers that do not support gradients */
+          background: -webkit-linear-gradient(90deg, #0e0f12, #198aba);
+          /* For Safari 5.1 to 6 */
+          background: -o-linear-gradient(90deg, #0e0f12, #198aba);
+          /* For Opera 11.1 to 12.0 */
+          background: -moz-linear-gradient(90deg, #0e0f12, #198aba);
+          /* For Firefox 3.6 to 15 */
+          background: linear-gradient(90deg, #0e0f12, #198aba);
+          /* Standard syntax */ }
+        main .sidebar .sidenav .item:active .fa {
+          background: #E0E0E0; }
+    main .sidebar .navLogo {
+      position: absolute;
+      bottom: 2%;
+      left: 5%;
+      font-family: "Pacifico", Helvetica, sans-serif;
+      color: #33CCD3; }
+
+/*# sourceMappingURL=appTemplate1.css.map */

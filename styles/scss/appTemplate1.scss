@@ -1,0 +1,152 @@
+// mixins
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin linear-gradient($deg,$color1,$color2) {
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($deg, $color1, $color2); /* For Safari 5.1 to 6 */
+    background: -o-linear-gradient($deg, $color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($deg, $color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($deg, $color1, $color2); /* Standard syntax */
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin transition($vals) {
+  -webkit-transition: $vals;
+  -moz-transition: $vals;
+  -o-transition: $vals;
+  transition: $vals;
+}
+
+$white: #EFEFEF;
+$gray: #E0E0E0;
+$blue: #33CCD3;
+$dblue: #198aba;
+$red: deeppink;
+$green: #54AC9C;
+$dark: #292929;
+
+// ================================================================================== //
+
+body {
+    position: relative;
+    height: 100%;
+    background-color: #1A1A1A;
+    color: $white;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+main {
+    @include flexbox;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: space-between;
+    
+    .appContainer {
+        background-color: #1A1A1A;
+        width: 88%;
+        padding: 2% 2% 2%;
+        @include flexbox;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: space-around;
+        .appHeader {
+            text-align: left;
+            border-bottom: solid 1px $dblue;
+            .headerText {
+                display: inline;
+                font-size: 40px;
+                color: $white;
+            }
+        }
+        .appBody {
+            padding-top: 1%;
+        }
+        
+    }
+    
+    .sidebar {     
+        width: 12%;
+        height: 100%;
+        min-width: 27px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #0e0f12;
+        border-right: solid 1px $blue;
+        font-size: 14px;
+        @media (max-width: 400px){
+            background-color: rgba(0,0,0,0.0);
+        }
+        .sideHeader {
+            font-family: "Pacifico", Helvetica, sans-serif;
+            color: $dblue;
+        }
+        .sidenav {
+            text-align: left;
+            position: relative;
+            top: 5%;
+            .item {
+                display: block;
+                height: 80px;
+                padding-top: 13%;
+                cursor: pointer;  
+                border: solid 1px $blue;
+                border-left: none;
+                border-right: none;
+                .fa {       
+                    position: absolute;
+                    left: 8%;
+                    font-size: 22px;           
+                    color: $white;           
+                }
+                .menu-text {     
+                    display: inline;
+                    position: absolute;
+                    left: 25%;
+                    color: white;
+                }   
+                .itemlink {
+                    text-decoration: none;
+                }
+                @include transition(all 0.3s); 
+                &:hover {
+                    @include linear-gradient(90deg, #0e0f12, #198aba);
+                    
+                  .menu-text {
+                   
+                    }
+                }
+                &:active {
+                    .fa {
+                        background: $gray;
+                    }
+                }
+            }
+            
+        }
+        .navLogo {
+            position: absolute;
+            bottom: 2%;
+            left: 5%;
+            font-family: "Pacifico", Helvetica, sans-serif;
+            color: $blue;
+        }
+    } 
+}
