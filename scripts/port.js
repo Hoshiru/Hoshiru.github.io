@@ -1,7 +1,6 @@
 $(document).ready(function() {
    /* $('body').scrollspy({target: "#side-nav", offset: 50}); */  
     
-    $(".pcategory").hide();
     dropCategory();
     sideDrop();
     

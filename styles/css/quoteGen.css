@@ -1,0 +1,92 @@
+body {
+  position: relative;
+  height: 100%;
+  background-color: #292929;
+  color: #EFEFEF;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center; }
+
+main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: space-between; }
+  main .sidebar .sidenav #item1 {
+    background: #0e0f12;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, #0e0f12, #198aba);
+    /* For Safari 5.1 to 6 */
+    background: -o-linear-gradient(90deg, #0e0f12, #198aba);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #0e0f12, #198aba);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, #0e0f12, #198aba);
+    /* Standard syntax */ }
+  main .portcontainer {
+    background-color: #292929;
+    width: 85%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-around; }
+    main .portcontainer .pageHeader {
+      padding: 5% 4% 2%; }
+      main .portcontainer .pageHeader .headerText {
+        width: 25%;
+        font-size: 30px;
+        color: white;
+        text-align: left;
+        border-bottom: 2px solid #19aaba; }
+    main .portcontainer .pageBody {
+      padding: 2% 4% 1%;
+      /*background-color: $dark; */
+      color: #E0E0E0; }
+      main .portcontainer .pageBody .quoteBox {
+        margin: 10%;
+        padding: 10%;
+        background-color: #1A1A1A;
+        border: 1px groove #E0E0E0;
+        border-radius: 8px; }
+      main .portcontainer .pageBody .quoteText {
+        font-size: 2em;
+        font-weight: 500; }
+        main .portcontainer .pageBody .quoteText i {
+          font-size: 0.75em; }
+      main .portcontainer .pageBody .quoteAuthor {
+        padding-top: 5%;
+        font-size: 1em;
+        text-align: right; }
+      main .portcontainer .pageBody .buttons {
+        padding-top: 15%; }
+        main .portcontainer .pageBody .buttons #tweetQuote {
+          float: left;
+          padding: 1px 7px;
+          font-size: 1.5em;
+          background-color: #EFEFEF;
+          border-radius: 3px;
+          cursor: pointer; }
+          main .portcontainer .pageBody .buttons #tweetQuote:hover {
+            opacity: 0.85; }
+        main .portcontainer .pageBody .buttons #newQuote {
+          float: right;
+          padding: 7px;
+          color: #EFEFEF;
+          background-color: #33CCD3;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer; }
+          main .portcontainer .pageBody .buttons #newQuote:hover {
+            opacity: 0.85; }
+
+/*# sourceMappingURL=quoteGen.css.map */

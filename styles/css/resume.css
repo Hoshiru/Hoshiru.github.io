@@ -34,10 +34,10 @@ main .content {
     /* Standard syntax */ }
   main .content .resume {
     padding: 5% 2% 5%; }
-    main .content .resume #contactPic {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%; }
+  main .content #contactPic {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; }
 
 /*# sourceMappingURL=resume.css.map */

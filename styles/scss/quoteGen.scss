@@ -1,0 +1,134 @@
+// mixins
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin linear-gradient($deg,$color1,$color2) {
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($deg, $color1, $color2); /* For Safari 5.1 to 6 */
+    background: -o-linear-gradient($deg, $color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($deg, $color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($deg, $color1, $color2); /* Standard syntax */
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin transition($vals) {
+  -webkit-transition: $vals;
+  -moz-transition: $vals;
+  -o-transition: $vals;
+  transition: $vals;
+}
+
+$white: #EFEFEF;
+$gray: #E0E0E0;
+$blue: #33CCD3;
+$dblue: #198aba;
+$red: deeppink;
+$green: #54AC9C;
+$dark: #292929;
+$black: #1A1A1A;
+
+// ================================================================================== //
+
+body {
+    position: relative;
+    height: 100%;
+    background-color: $dark;
+    color: $white;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+main {
+    @include flexbox;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: space-between;
+
+    .sidebar .sidenav #item1 {        // Highlight current app in sidebar
+        @include linear-gradient(90deg, #0e0f12, #198aba);
+    }
+
+    .portcontainer {
+        background-color: $dark;
+        width: 85%;
+        @include flexbox;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: space-around;
+        .pageHeader {
+            padding: 5% 4% 2%;
+            .headerText {
+                width: 25%;
+                font-size: 30px;
+                color: white;
+                text-align: left;
+                border-bottom: 2px solid #19aaba;
+            }
+        }
+        .pageBody {
+            padding: 2% 4% 1%;
+            /*background-color: $dark; */
+            color: $gray;
+            .quoteBox {
+                margin: 10%;
+                padding: 10%;
+                background-color: $black;
+                border: 1px groove $gray;
+                border-radius: 8px;
+            }
+            .quoteText {
+                font-size: 2em;
+                font-weight: 500;
+                i {
+                    font-size: 0.75em;
+                }
+            }
+            .quoteAuthor {
+                padding-top: 5%;
+                font-size: 1em ;
+                text-align: right;
+            }
+            .buttons {
+                padding-top: 15%;
+                #tweetQuote {
+                    float: left;
+                    padding: 1px 7px;
+                    font-size: 1.5em;
+                    background-color: $white;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
+                #newQuote {
+                    float: right;
+                    padding: 7px;
+                    color: $white;
+                    background-color: $blue;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
+            }
+        }
+    }
+}

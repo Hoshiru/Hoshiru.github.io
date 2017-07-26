@@ -1,0 +1,115 @@
+// mixins
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin linear-gradient($deg,$color1,$color2) {
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($deg, $color1, $color2); /* For Safari 5.1 to 6 */
+    background: -o-linear-gradient($deg, $color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($deg, $color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($deg, $color1, $color2); /* Standard syntax */
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin transition($vals) {
+  -webkit-transition: $vals;
+  -moz-transition: $vals;
+  -o-transition: $vals;
+  transition: $vals;
+}
+
+$white: #EFEFEF;
+$gray: #E0E0E0;
+$blue: #33CCD3;
+$red: deeppink;
+$green: #54AC9C;
+$dark: #292929;
+
+// ================================================================================== //
+
+.container {                                        // navigation bar
+    width: 85%;
+    height: 5%;
+    background-color: black;
+    box-shadow: 0 0 2px 0 $gray;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    @include flexbox;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    .fa {
+        color: $blue;
+    }
+    #menu-toggle {                          // hide menu button on normal displays
+        display: none;
+        border: 0;
+        outline: none;
+        background: transparent;
+        @media (max-width: 590px) {         // show on small displays
+            display: block;
+        }
+    }
+    #nav {
+        width: 70%;
+        @include flexbox;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: stretch;
+
+        .highlight {                        // Hover style
+            border-bottom: 2px solid transparent;
+            text-decoration: none;
+            color: $blue;
+            transition: border-bottom 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        #hlight1:hover {
+            border-bottom: 2px solid magenta;
+        }
+        #hlight2:hover {
+            border-bottom: 2px solid aqua;
+        }
+        #hlight3:hover {
+            border-bottom: 2px solid chartreuse;
+        }
+        #hlight4:hover {
+            border-bottom: 2px solid darkorange;
+        }
+        #hlight5:hover {
+            border-bottom: 2px solid red;
+        }
+
+        @media (max-width: 590px) {         // reformat nav menu on small displays
+            @include flexbox;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            position: fixed;
+            top: 6%;
+            width: 100%;
+            a {
+                background-color: rgba(0,0,0,0.5);
+                color: $white;
+                border-top: 1px groove;
+                text-align: center;
+                width: 50%;
+            }
+        }
+    }
+}

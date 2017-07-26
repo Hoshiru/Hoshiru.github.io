@@ -1,0 +1,117 @@
+// mixins
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin linear-gradient($deg,$color1,$color2) {
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($deg, $color1, $color2); /* For Safari 5.1 to 6 */
+    background: -o-linear-gradient($deg, $color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($deg, $color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($deg, $color1, $color2); /* Standard syntax */
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin transition($vals) {
+  -webkit-transition: $vals;
+  -moz-transition: $vals;
+  -o-transition: $vals;
+  transition: $vals;
+}
+
+$white: #EFEFEF;
+$gray: #E0E0E0;
+$blue: #33CCD3;
+$red: deeppink;
+$green: #54AC9C;
+$dark: #292929;
+
+// ================================================================================== //
+
+.sidebar {
+    width: 15%;
+    height: 100%;
+    min-width: 27px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 2px solid #198aba;
+    background: #0e0f12;
+    @media (max-width: 400px){
+        background-color: rgba(0,0,0,0.0);
+    }
+    .appLogo {
+        @include flexbox;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        font-size: 2.2em;
+        h3 {
+            @media (max-width: 590px) {
+                display: none;
+            }
+        }
+    }
+    .sidenav {
+        text-align: left;
+        position: relative;
+        top: 5%;
+        .item {
+            display: block;
+            height: 70px;
+            border-top: 2px solid #198aba;
+            cursor: pointer;
+            @include transition(all 0.3s);
+            .fa {
+                position: absolute;
+                text-align: left;
+                height: 100%;
+                width: 100%;
+                font-size: 1.5em;
+                padding-top: 13%;
+                padding-left: 8%;
+                color: $white;
+                @media (max-width: 590px) {
+                    text-align: center;
+                    padding-top: 30%;
+                }
+            }
+            .menu-text {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding-top: 13%;
+                padding-left: 30%;
+                font-size: 0.9em;
+                text-align: left;
+                color: white;
+                @media (max-width: 590px) {
+                    display: none;
+                }
+            }
+            &:hover {
+              .fa {
+                @include linear-gradient(90deg, #0e0f12, #198aba);
+                }
+            }
+        }
+    }
+    .siteLogo {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        font-family: "Kaushan Script";
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <!-- jQuery Javascript Library -->
+        <script
+			  src="https://code.jquery.com/jquery-3.1.0.js"
+			  integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+			  crossorigin="anonymous">
+        </script>
+
+            <!-- Bootstrap Library -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+            <!-- FontAwesome library for custom icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+            <!-- Animate.css Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+            <!-- Compatibility & Fonts -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+            <!-- Page Info & Links -->
+        <title>Jared Hayes</title>
+        <meta name="description" content="Smush App">
+        <link type="text/css" rel="stylesheet" href="/styles/css/smushApp.css">
+        <link type="text/css" rel="stylesheet" href="/styles/css/topNav.css">
+        <link type="text/css" rel="stylesheet" href="/styles/css/sideNav.css">
+
+    </head>
+
+<!-- ================================================================================= -->
+
+    <body data-spy="scroll" data-target="#side-nav">
+
+        <main>
+            <div class="sidebar" id="side-nav">
+                <div class="appLogo" id="smushLogo">
+                    <a href="#top"><i class="fa fa-cube"></i></a>
+                    <a href="#top"><h3>Smush</h3></a>
+                </div>
+                <ul class="nav sidenav">
+                    <li><div class="item" id="item1">
+                        <a class="itemlink" id="ilink1" href="/html/quoteGen.html">
+                            <i class="fa fa-globe"></i>
+                            <p class="menu-text">Quote Generator</p>
+                        </a>
+                    </div></li>
+                    <li><div class="item" id="item2">
+                        <a class="itemlink" id="ilink2" href="/html/weather.html">
+                            <i class="fa fa-keyboard-o"></i>
+                            <p class="menu-text">Weather</p>
+                        </a>
+                    </div></li>
+                    <li><div class="item" id="item3">
+                        <a class="itemlink" id="ilink3" href="/html/wikipedia.html">
+                            <i class="fa fa-mobile"></i>
+                            <p class="menu-text">Wikipedia</p>
+                        </a>
+                    </div></li>
+                    <li><div class="item" id="item4">
+                        <a class="itemlink" id="ilink4" href="/html/twitch.html">
+                            <i class="fa fa-gears"></i>
+                            <p class="menu-text">Twitch</p>
+                        </a>
+                    </div></li>
+                </ul>
+                <div class="siteLogo" id="JMK">
+                    <a href="/index.html"><h3>JMK</h3></a>
+                </div>
+            </div>
+
+            <section class="portcontainer">
+                <section class="container" id="topNav">
+                    <button id="menu-toggle"><i class="fa fa-list"></i></button>
+                    <nav id="nav">
+                        <a class="highlight" id="hlight1" href="/index.html">About</a>
+                        <a class="highlight" id="hlight2" href="/html/resume.html">Resume</a>
+                        <a class="highlight" id="hlight3" href="/html/port.html">Portfolio</a>
+                        <a class="highlight" id="hlight4" href="/html/contact.html">Contact</a>
+                        <a class="highlight" id="hlight5" href="/html/extra.html">Extra</a>
+                    </nav>
+                </section>
+                <section class="pageHeader" id="loginHeader">
+                    <h1 class="headerText">Quote Generator</h1>
+                </section>
+                <section class="pageBody">
+                    <div class="quoteBox">
+                        <div class="quoteText">
+                            <i class="fa fa-quote-left"></i><span id="quote">Quote</span>
+                        </div>
+                        <div class="quoteAuthor">
+                            <span id="author">author</span>
+                        </div>
+                        <div class="buttons">
+                            <a class="button" id="tweetQuote" title="Tweet this quote!" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <button class="button" id="newQuote"><b>New Quote</b></button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+    <script src="/scripts/quoteGen.js"></script>
+    <script src="/scripts/nav-header.js"></script>
+
+    </body>
+</html>

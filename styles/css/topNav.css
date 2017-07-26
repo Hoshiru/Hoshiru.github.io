@@ -1,0 +1,75 @@
+.container {
+  width: 85%;
+  height: 5%;
+  background-color: black;
+  box-shadow: 0 0 2px 0 #E0E0E0;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch; }
+  .container .fa {
+    color: #33CCD3; }
+  .container #menu-toggle {
+    display: none;
+    border: 0;
+    outline: none;
+    background: transparent; }
+    @media (max-width: 590px) {
+      .container #menu-toggle {
+        display: block; } }
+  .container #nav {
+    width: 70%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch; }
+    .container #nav .highlight {
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+      color: #33CCD3;
+      transition: border-bottom 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .container #nav #hlight1:hover {
+      border-bottom: 2px solid magenta; }
+    .container #nav #hlight2:hover {
+      border-bottom: 2px solid aqua; }
+    .container #nav #hlight3:hover {
+      border-bottom: 2px solid chartreuse; }
+    .container #nav #hlight4:hover {
+      border-bottom: 2px solid darkorange; }
+    .container #nav #hlight5:hover {
+      border-bottom: 2px solid red; }
+    @media (max-width: 590px) {
+      .container #nav {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        position: fixed;
+        top: 6%;
+        width: 100%; }
+        .container #nav a {
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #EFEFEF;
+          border-top: 1px groove;
+          text-align: center;
+          width: 50%; } }
+
+/*# sourceMappingURL=topNav.css.map */
