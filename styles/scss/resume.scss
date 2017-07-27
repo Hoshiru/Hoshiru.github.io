@@ -8,10 +8,10 @@
 }
 
 @mixin order($val) {
-  -webkit-box-ordinal-group: $val;  
-  -moz-box-ordinal-group: $val;     
-  -ms-flex-order: $val;     
-  -webkit-order: $val;  
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
   order: $val;
 }
 
@@ -67,5 +67,10 @@ main {
             max-width: 100%;
             max-height: 100%;
         }
+        #download {
+          padding-top: 5%;
+          display: block;
+        }
+
     }
 }
